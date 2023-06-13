@@ -1,6 +1,6 @@
 <h1>My Tasks</h1>
 <% @tasks.each do |task| %>
-<ol><%= task.completed %><%= link_to task.title, task_path(task) %><%= link_to "Un job de plus en moins!", task_path(task), data: {turbo_method: :delete} %></ol>
+<ol><%= task.completed %><%= link_to task.title, task_path(task) %><%= link_to "Un job de plus en moins!", task_path(task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></ol>
 <% end %>
 
 <p><%= link_to "T'en veux plus ?", new_task_path %></p>
